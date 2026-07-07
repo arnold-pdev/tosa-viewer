@@ -10,14 +10,27 @@
   <aside id="sidebar">
     <h1>TOSA shape sensitivities</h1>
     <p class="hint">
-      Shape derivative densities on NITO-3D designs. Blue pulls the boundary
-      inward, red pushes outward (V<sub>C</sub> = &minus;&sigma;:&epsilon;,
-      normalized). Arrows mark NITO load anchors and force directions.
+      Relative compliance sensitivity on faired NITO-3D surfaces.
+      <strong>V<sub>C,rel</sub></strong> is the fractional compliance change per
+      unit boundary offset (negative = outward motion reduces compliance).
+      Blue pulls inward, red pushes outward. Teal tint marks fixed BC patches.
+      Arrows show NITO load anchors and force directions.
     </p>
     <h2>Samples</h2>
     <ul id="samples"></ul>
     <h2>Scalar</h2>
     <select id="scalar"></select>
+    <p id="compliance" class="compliance"></p>
+    <div class="legend">
+      <div class="legend-item">
+        <span class="swatch swatch-bc"></span>
+        <span>fixed support (BC patch)</span>
+      </div>
+      <div class="legend-item">
+        <span class="swatch swatch-load"></span>
+        <span>load arrow</span>
+      </div>
+    </div>
     <label class="toggle">
       <input type="checkbox" id="show-loads" checked> Show load arrows
     </label>

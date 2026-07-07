@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generated": "2026-07-07T03:21:37+00:00",
+  "version": 2,
+  "generated": "2026-07-07T08:16:10+00:00",
   "tosa_commit": "9f2e5fac024a167c720463c1304bfe04e27c6e13",
   "samples": [
     {
@@ -11,14 +11,23 @@
         32,
         32
       ],
-      "defaultScalar": "V_C",
+      "defaultScalar": "V_C_rel",
       "scalars": [
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.1460989537839579,
+            0.4068765335659582
+          ],
+          "diverging": true
+        },
         {
           "name": "V_C",
           "location": "point",
           "range": [
-            -0.6426631833916964,
-            0.05166496822867968
+            -1.3947729765812347,
+            3.884463240477794
           ],
           "diverging": true
         }
@@ -37,7 +46,9 @@
           ],
           "magnitude": 1.0
         }
-      ]
+      ],
+      "hasFixed": true,
+      "compliance": 29027.949225921613
     },
     {
       "index": 10,
@@ -47,14 +58,23 @@
         32,
         16
       ],
-      "defaultScalar": "V_C",
+      "defaultScalar": "V_C_rel",
       "scalars": [
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.53513140271668,
+            1.6190283937954437
+          ],
+          "diverging": true
+        },
         {
           "name": "V_C",
           "location": "point",
           "range": [
-            -1.7076307951899719,
-            0.0023854131733173287
+            -1.4392194511319778,
+            4.354430831958242
           ],
           "diverging": true
         }
@@ -73,7 +93,9 @@
           ],
           "magnitude": 1.0
         }
-      ]
+      ],
+      "hasFixed": true,
+      "compliance": 8467.915419929059
     },
     {
       "index": 119,
@@ -83,14 +105,23 @@
         32,
         32
       ],
-      "defaultScalar": "V_C",
+      "defaultScalar": "V_C_rel",
       "scalars": [
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -102.99940984556295,
+            477.17994406045534
+          ],
+          "diverging": true
+        },
         {
           "name": "V_C",
           "location": "point",
           "range": [
-            -0.35354963538474454,
-            0.14727487211716575
+            -3.203840586656084,
+            14.84294015337377
           ],
           "diverging": true
         }
@@ -109,7 +140,9 @@
           ],
           "magnitude": 1.0
         }
-      ]
+      ],
+      "hasFixed": true,
+      "compliance": 32932.30456672468
     }
   ]
 }

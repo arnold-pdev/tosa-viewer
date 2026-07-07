@@ -1,4 +1,4 @@
-// App shell: manifest fetch, sample list, scalar select, load arrows.
+// App shell: manifest fetch, sample list, scalar select, load arrows, BC legend.
 
 import { createViewer, displayRange } from './viewer.js';
 import { buildLoadActors } from './arrows.js';
@@ -9,15 +9,16 @@ const els = {
   showLoads: document.getElementById('show-loads'),
   reset: document.getElementById('reset-camera'),
   provenance: document.getElementById('provenance'),
+  compliance: document.getElementById('compliance'),
   status: document.getElementById('status'),
   view: document.getElementById('view'),
 };
 
 const viewer = createViewer(els.view);
-window.__viewer = viewer; // debug handle (harmless in production)
+window.__viewer = viewer;
 const vtpCache = new Map();
 let manifest = null;
-let current = null; // active manifest sample entry
+let current = null;
 let loadActors = [];
 
 function status(message, isError = false) {
@@ -45,6 +46,17 @@ function setLoadActors(sample) {
   });
 }
 
+function updateCompliance(sample) {
+  if (!els.compliance) return;
+  if (sample.compliance != null) {
+    els.compliance.textContent = `Compliance C = ${Number(sample.compliance).toPrecision(5)}`;
+    els.compliance.classList.add('visible');
+  } else {
+    els.compliance.textContent = '';
+    els.compliance.classList.remove('visible');
+  }
+}
+
 function fillScalarSelect(sample) {
   els.scalar.innerHTML = '';
   for (const scalar of sample.scalars) {
@@ -65,6 +77,7 @@ async function showSample(sample, scalarName) {
     const buffer = await fetchVtp(sample);
     await viewer.showSurface(buffer, scalar);
     setLoadActors(sample);
+    updateCompliance(sample);
     if (current?.index !== sample.index) viewer.resetCamera();
     current = sample;
     viewer.render();
