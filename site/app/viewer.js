@@ -39,55 +39,6 @@ function buildLut(scalar) {
   return lut;
 }
 
-function extractFixedCells(polydata) {
-  const fixed = polydata.getCellData().getArrayByName('fixed');
-  if (!fixed) return null;
-
-  const polys = polydata.getPolys();
-  if (!polys) return null;
-
-  const polyBuf = polys.getData();
-  if (!polyBuf || !polyBuf.length) return null;
-
-  const pts = polydata.getPoints();
-  const outPts = vtk.Common.Core.vtkPoints.newInstance();
-  const outCells = vtk.Common.Core.vtkCellArray.newInstance();
-  const pointMap = new Map();
-
-  function mapPoint(pid) {
-    if (!pointMap.has(pid)) {
-      const idx = pointMap.size;
-      pointMap.set(pid, idx);
-      outPts.insertNextPoint(pts.getPoint(pid));
-    }
-    return pointMap.get(pid);
-  }
-
-  let cellIdx = 0;
-  let offset = 0;
-  while (offset < polyBuf.length) {
-    const n = polyBuf[offset++];
-    const ids = [];
-    for (let k = 0; k < n; k += 1) ids.push(polyBuf[offset++]);
-
-    if (fixed.getComponent(cellIdx, 0) === 1 && n >= 3) {
-      const tri = [mapPoint(ids[0]), mapPoint(ids[1]), mapPoint(ids[2])];
-      outCells.insertNextCell(3, tri);
-      if (n === 4) {
-        outCells.insertNextCell(3, [tri[0], tri[2], mapPoint(ids[3])]);
-      }
-    }
-    cellIdx += 1;
-  }
-
-  if (!outCells.getNumberOfCells()) return null;
-
-  const out = vtk.Common.DataModel.vtkPolyData.newInstance();
-  out.setPoints(outPts);
-  out.setPolys(outCells);
-  return out;
-}
-
 export function createViewer(container) {
   const grw = vtkGenericRenderWindow.newInstance({ background: [1, 1, 1] });
   grw.setContainer(container);
@@ -98,15 +49,12 @@ export function createViewer(container) {
   const renderWindow = grw.getRenderWindow();
 
   let surfaceActor = null;
-  let fixedActor = null;
   let scalarBar = null;
 
   function clearSurface() {
     if (surfaceActor) renderer.removeActor(surfaceActor);
-    if (fixedActor) renderer.removeActor(fixedActor);
     if (scalarBar) renderer.removeActor(scalarBar);
     surfaceActor = null;
-    fixedActor = null;
     scalarBar = null;
   }
 
@@ -134,31 +82,6 @@ export function createViewer(container) {
     prop.setDiffuse(0.35);
     prop.setSpecular(0);
     renderer.addActor(surfaceActor);
-
-    let fixedPoly = null;
-    try {
-      fixedPoly = extractFixedCells(polydata);
-    } catch (err) {
-      console.warn('BC overlay skipped:', err);
-    }
-    if (fixedPoly) {
-      const fixedMapper = vtkMapper.newInstance();
-      fixedMapper.setInputData(fixedPoly);
-      fixedActor = vtkActor.newInstance();
-      fixedActor.setMapper(fixedMapper);
-      const fp = fixedActor.getProperty();
-      fp.setColor(...BC_HUE);
-      fp.setOpacity(0.35);
-      fp.setAmbient(0.9);
-      fp.setDiffuse(0.1);
-      fp.setSpecular(0);
-      // Pull overlay slightly toward the camera to reduce z-fighting.
-      if (fixedMapper.setResolveCoincidentTopologyToPolygonOffset) {
-        fixedMapper.setResolveCoincidentTopologyToPolygonOffset();
-        fixedMapper.setResolveCoincidentTopologyPolygonOffsetParameters(-1, -1);
-      }
-      renderer.addActor(fixedActor);
-    }
 
     scalarBar = vtkScalarBarActor.newInstance();
     scalarBar.setScalarsToColors(lut);
