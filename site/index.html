@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOSA shape sensitivities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1>TOSA shape sensitivities</h1>
+    <p class="hint">
+      Shape derivative densities on NITO-3D designs. Blue pulls the boundary
+      inward, red pushes outward (V<sub>C</sub> = &minus;&sigma;:&epsilon;,
+      normalized). Arrows mark NITO load anchors and force directions.
+    </p>
+    <h2>Samples</h2>
+    <ul id="samples"></ul>
+    <h2>Scalar</h2>
+    <select id="scalar"></select>
+    <label class="toggle">
+      <input type="checkbox" id="show-loads" checked> Show load arrows
+    </label>
+    <button id="reset-camera">Reset camera</button>
+    <footer id="provenance"></footer>
+  </aside>
+  <main id="view"></main>
+  <div id="status"></div>
+  <script src="vendor/vtk-36.2.1.js"></script>
+  <script type="module" src="app/main.js"></script>
+</body>
+</html>

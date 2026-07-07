@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "generated": "2026-07-07T03:21:37+00:00",
+  "tosa_commit": "9f2e5fac024a167c720463c1304bfe04e27c6e13",
+  "samples": [
+    {
+      "index": 0,
+      "vtp": "vtp/0.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C",
+      "scalars": [
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.6426631833916964,
+            0.05166496822867968
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            -0.9514021009833966,
+            0.30795136343971435
+          ],
+          "magnitude": 1.0
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "vtp": "vtp/10.vtp",
+      "shape": [
+        64,
+        32,
+        16
+      ],
+      "defaultScalar": "V_C",
+      "scalars": [
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.7076307951899719,
+            0.0023854131733173287
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            9.0,
+            12.0
+          ],
+          "force": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "magnitude": 1.0
+        }
+      ]
+    },
+    {
+      "index": 119,
+      "vtp": "vtp/119.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C",
+      "scalars": [
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.35354963538474454,
+            0.14727487211716575
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            0.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ]
+    }
+  ]
+}

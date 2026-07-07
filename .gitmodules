@@ -1,0 +1,5 @@
+[submodule "tosa"]
+	path = tosa
+	url = https://github.com/arnold-pdev/TOSA.git
+	branch = main
+	shallow = true
