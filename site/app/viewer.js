@@ -21,6 +21,10 @@ function hexToRgb(hex) {
 }
 
 export function displayRange(scalar) {
+  // Prefer the exporter's robust (99th-percentile) range so a single
+  // hotspot cannot wash out the colormap; values beyond it clamp to the
+  // end colors. Fall back to the full range, symmetric for diverging fields.
+  if (scalar.robustRange) return scalar.robustRange;
   if (scalar.diverging) {
     const bound = Math.max(Math.abs(scalar.range[0]), Math.abs(scalar.range[1])) || 1;
     return [-bound, bound];
