@@ -46,12 +46,8 @@ function extractFixedCells(polydata) {
   const polys = polydata.getPolys();
   if (!polys) return null;
 
-  const nCells = polydata.getNumberOfCells();
-  const fixedIds = [];
-  for (let c = 0; c < nCells; c += 1) {
-    if (fixed.getComponent(c, 0) === 1) fixedIds.push(c);
-  }
-  if (!fixedIds.length) return null;
+  const polyBuf = polys.getData();
+  if (!polyBuf || !polyBuf.length) return null;
 
   const pts = polydata.getPoints();
   const outPts = vtk.Common.Core.vtkPoints.newInstance();
@@ -67,20 +63,24 @@ function extractFixedCells(polydata) {
     return pointMap.get(pid);
   }
 
-  for (const cid of fixedIds) {
-    const cell = polydata.getCell(cid);
-    const ids = cell.getPointIds();
-    const n = ids.getNumberOfIds();
-    if (n < 3) continue;
-    const tri = [mapPoint(ids.getId(0)), mapPoint(ids.getId(1)), mapPoint(ids.getId(2))];
-    outCells.insertNextCell(3, tri);
-    if (n === 4) {
-      outCells.insertNextCell(
-        3,
-        [tri[0], tri[2], mapPoint(ids.getId(3))],
-      );
+  let cellIdx = 0;
+  let offset = 0;
+  while (offset < polyBuf.length) {
+    const n = polyBuf[offset++];
+    const ids = [];
+    for (let k = 0; k < n; k += 1) ids.push(polyBuf[offset++]);
+
+    if (fixed.getComponent(cellIdx, 0) === 1 && n >= 3) {
+      const tri = [mapPoint(ids[0]), mapPoint(ids[1]), mapPoint(ids[2])];
+      outCells.insertNextCell(3, tri);
+      if (n === 4) {
+        outCells.insertNextCell(3, [tri[0], tri[2], mapPoint(ids[3])]);
+      }
     }
+    cellIdx += 1;
   }
+
+  if (!outCells.getNumberOfCells()) return null;
 
   const out = vtk.Common.DataModel.vtkPolyData.newInstance();
   out.setPoints(outPts);
@@ -135,7 +135,12 @@ export function createViewer(container) {
     prop.setSpecular(0);
     renderer.addActor(surfaceActor);
 
-    const fixedPoly = extractFixedCells(polydata);
+    let fixedPoly = null;
+    try {
+      fixedPoly = extractFixedCells(polydata);
+    } catch (err) {
+      console.warn('BC overlay skipped:', err);
+    }
     if (fixedPoly) {
       const fixedMapper = vtkMapper.newInstance();
       fixedMapper.setInputData(fixedPoly);
