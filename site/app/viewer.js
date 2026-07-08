@@ -6,11 +6,12 @@ const { vtkMapper, vtkActor, vtkColorTransferFunction, vtkScalarBarActor } =
   vtk.Rendering.Core;
 const vtkXMLPolyDataReader = vtk.IO.XML.vtkXMLPolyDataReader;
 
-// matplotlib RdBu_r anchors, min -> max (blue = negative, red = positive),
-// matching the TOSA trame viewer's colormap policy for shape derivatives.
-const RDBU_R = [
-  '#053061', '#2166ac', '#4393c3', '#92c5de', '#d1e5f0', '#f7f7f7',
-  '#fddbc7', '#f4a582', '#d6604d', '#b2182b', '#67001f',
+// matplotlib RdBu anchors, min -> max (red = negative, blue = positive).
+// Negative shape derivative = moving the boundary outward (adding material)
+// lowers compliance, so "wants to grow" reads warm/red.
+const RDBU = [
+  '#67001f', '#b2182b', '#d6604d', '#f4a582', '#fddbc7', '#f7f7f7',
+  '#d1e5f0', '#92c5de', '#4393c3', '#2166ac', '#053061',
 ];
 
 // Translucent slate-teal for fixed BC patches.
@@ -35,8 +36,8 @@ export function displayRange(scalar) {
 function buildLut(scalar) {
   const [lo, hi] = displayRange(scalar);
   const lut = vtkColorTransferFunction.newInstance();
-  RDBU_R.forEach((hex, i) => {
-    const x = lo + (i / (RDBU_R.length - 1)) * (hi - lo);
+  RDBU.forEach((hex, i) => {
+    const x = lo + (i / (RDBU.length - 1)) * (hi - lo);
     lut.addRGBPoint(x, ...hexToRgb(hex));
   });
   lut.setMappingRange(lo, hi);
@@ -54,12 +55,15 @@ export function createViewer(container) {
 
   let surfaceActor = null;
   let scalarBar = null;
+  let bcActor = null;
 
   function clearSurface() {
     if (surfaceActor) renderer.removeActor(surfaceActor);
     if (scalarBar) renderer.removeActor(scalarBar);
+    if (bcActor) renderer.removeActor(bcActor);
     surfaceActor = null;
     scalarBar = null;
+    bcActor = null;
   }
 
   async function showSurface(arrayBuffer, scalar) {
@@ -87,13 +91,87 @@ export function createViewer(container) {
     prop.setSpecular(0);
     renderer.addActor(surfaceActor);
 
+    return finishScalarBar(lut, scalar, polydata);
+  }
+
+  // Blocky input voxel grid: solid fill + cube edges, no scalar coloring/bar.
+  // Optional bcBuffer overlays the fixed-BC patch faces in teal.
+  async function showVoxels(arrayBuffer, bcBuffer = null) {
+    clearSurface();
+
+    const reader = vtkXMLPolyDataReader.newInstance();
+    reader.parseAsArrayBuffer(arrayBuffer);
+    const polydata = reader.getOutputData(0);
+
+    const mapper = vtkMapper.newInstance({ scalarVisibility: false });
+    mapper.setInputData(polydata);
+
+    surfaceActor = vtkActor.newInstance();
+    surfaceActor.setMapper(mapper);
+    const prop = surfaceActor.getProperty();
+    prop.setColor(0.62, 0.66, 0.72);
+    prop.setAmbient(0.45);
+    prop.setDiffuse(0.55);
+    prop.setSpecular(0);
+    prop.setEdgeVisibility(true);
+    prop.setEdgeColor(0.25, 0.28, 0.33);
+    prop.setLineWidth(1);
+    renderer.addActor(surfaceActor);
+
+    if (bcBuffer) {
+      const bcReader = vtkXMLPolyDataReader.newInstance();
+      bcReader.parseAsArrayBuffer(bcBuffer);
+      const bcPoly = bcReader.getOutputData(0);
+      const bcMapper = vtkMapper.newInstance({ scalarVisibility: false });
+      bcMapper.setInputData(bcPoly);
+
+      bcActor = vtkActor.newInstance();
+      bcActor.setMapper(bcMapper);
+      const bcProp = bcActor.getProperty();
+      bcProp.setColor(...BC_HUE);
+      bcProp.setAmbient(0.7);
+      bcProp.setDiffuse(0.3);
+      bcProp.setSpecular(0);
+      renderer.addActor(bcActor);
+    }
+
+    return polydata;
+  }
+
+  function finishScalarBar(lut, scalar, polydata) {
     scalarBar = vtkScalarBarActor.newInstance();
     scalarBar.setScalarsToColors(lut);
     scalarBar.setAxisLabel(scalar.name);
     if (scalarBar.setAxisTextStyle) {
-      scalarBar.setAxisTextStyle({ fontColor: 'black' });
-      scalarBar.setTickTextStyle({ fontColor: 'black' });
+      // Match the page's system UI font stack (see style.css `body`).
+      const fontFamily =
+        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      scalarBar.setAxisTextStyle({
+        fontFamily,
+        fontStyle: 'normal',
+        fontColor: '#1a1a2e',
+      });
+      scalarBar.setTickTextStyle({
+        fontFamily,
+        fontStyle: 'normal',
+        fontColor: '#1a1a2e',
+      });
     }
+    // Scientific-notation tick labels spanning the mapping range.
+    // The helper exposes getLastTickBounds() = [lo, hi] (the LUT range).
+    scalarBar.setGenerateTicks((helper) => {
+      const [lo, hi] = helper.getLastTickBounds();
+      const n = 5;
+      const ticks = [];
+      const labels = [];
+      for (let i = 0; i < n; i += 1) {
+        const v = lo + (i / (n - 1)) * (hi - lo);
+        ticks.push(v);
+        labels.push(v.toExponential(2));
+      }
+      helper.setTicks(ticks);
+      helper.setTickStrings(labels);
+    });
     renderer.addActor(scalarBar);
 
     return polydata;
@@ -108,6 +186,7 @@ export function createViewer(container) {
     renderer,
     renderWindow,
     showSurface,
+    showVoxels,
     clearSurface,
     resetCamera,
     render: () => renderWindow.render(),

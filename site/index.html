@@ -18,9 +18,17 @@
     </p>
     <h2>Samples</h2>
     <ul id="samples"></ul>
+    <h2>Display</h2>
+    <div class="mode-toggle" id="display-mode">
+      <label class="toggle">
+        <input type="radio" name="display-mode" value="mesh" checked> Mesh (FE surface)
+      </label>
+      <label class="toggle">
+        <input type="radio" name="display-mode" value="voxel"> Voxel (input grid)
+      </label>
+    </div>
     <h2>Scalar</h2>
     <select id="scalar"></select>
-    <p id="compliance" class="compliance"></p>
     <div class="legend">
       <div class="legend-item">
         <span class="swatch swatch-bc"></span>
@@ -37,9 +45,11 @@
     <button id="reset-camera">Reset camera</button>
     <footer id="provenance"></footer>
   </aside>
-  <main id="view"></main>
+  <main id="view">
+    <div id="compliance" class="compliance-overlay" aria-live="polite"></div>
+  </main>
   <div id="status"></div>
   <script src="vendor/vtk-36.2.1.js"></script>
-  <script type="module" src="app/main.js"></script>
+  <script type="module" src="app/main.js?v=11"></script>
 </body>
 </html>
