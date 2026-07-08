@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-07-07T22:29:23+00:00",
+  "generated": "2026-07-08T04:30:38+00:00",
   "tosa_commit": "9f2e5fac024a167c720463c1304bfe04e27c6e13",
   "samples": [
     {
@@ -167,6 +167,2438 @@
       ],
       "hasFixed": true,
       "compliance": 2161.497159732048
+    },
+    {
+      "id": "eds-diffusion-02676-00",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 2676,
+      "variant": 0,
+      "title": "Diffusion \u00b7 train #2676 \u00b7 var 0",
+      "volumeFraction": 0.3385009765625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-02676-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.07133713138892937,
+            0.4080380031983652
+          ],
+          "robustRange": [
+            -0.00026831262677912067,
+            0.00026831262677912067
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.39237381785704356,
+            0.4080380031983652
+          ],
+          "robustRange": [
+            -0.00033316342223766517,
+            0.00033316342223766517
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.466399634429219,
+            2.5654340876061514
+          ],
+          "robustRange": [
+            -0.0018141129501300622,
+            0.0018141129501300622
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.324201375246048,
+            0.945988118648529,
+            0.0
+          ],
+          "magnitude": 1.0000000261678057
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 3439.5298213575825
+    },
+    {
+      "id": "eds-diffusion-02676-01",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 2676,
+      "variant": 1,
+      "title": "Diffusion \u00b7 train #2676 \u00b7 var 1",
+      "volumeFraction": 0.41900634765625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-02676-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.02861601953398173,
+            0.036295596951247476
+          ],
+          "robustRange": [
+            -8.527182664439919e-05,
+            8.527182664439919e-05
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.02861601953398173,
+            0.036295596951247476
+          ],
+          "robustRange": [
+            -9.611606005166309e-05,
+            9.611606005166309e-05
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.5307010028677668,
+            1.94285649079317
+          ],
+          "robustRange": [
+            -0.004540820847049935,
+            0.004540820847049935
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.324201375246048,
+            0.945988118648529,
+            0.0
+          ],
+          "magnitude": 1.0000000261678057
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 2928.954519358126
+    },
+    {
+      "id": "eds-diffusion-02676-02",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 2676,
+      "variant": 2,
+      "title": "Diffusion \u00b7 train #2676 \u00b7 var 2",
+      "volumeFraction": 0.272552490234375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-02676-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.039176375557979023,
+            0.40293579498714177
+          ],
+          "robustRange": [
+            -0.0006974169513428857,
+            0.0006974169513428857
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.04219184721287489,
+            0.40293579498714177
+          ],
+          "robustRange": [
+            -0.0011434172421838794,
+            0.0011434172421838794
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.38251150928011074,
+            3.6533240989148643
+          ],
+          "robustRange": [
+            -0.010338003008011631,
+            0.010338003008011631
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.324201375246048,
+            0.945988118648529,
+            0.0
+          ],
+          "magnitude": 1.0000000261678057
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 3212.826936253146
+    },
+    {
+      "id": "eds-diffusion-02676-03",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 2676,
+      "variant": 3,
+      "title": "Diffusion \u00b7 train #2676 \u00b7 var 3",
+      "volumeFraction": 0.17236328125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-02676-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.003006512162412133,
+            0.00048585895814377475
+          ],
+          "robustRange": [
+            -0.0009121794197589108,
+            0.0009121794197589108
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.003006512162412133,
+            0.00048585895814377475
+          ],
+          "robustRange": [
+            -0.0009496454770640601,
+            0.0009496454770640601
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.3475340044987726,
+            0.06611875785516819
+          ],
+          "robustRange": [
+            -0.10390909843420996,
+            0.10390909843420996
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.324201375246048,
+            0.945988118648529,
+            0.0
+          ],
+          "magnitude": 1.0000000261678057
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 5774.721722855842
+    },
+    {
+      "id": "eds-diffusion-05079-00",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 5079,
+      "variant": 0,
+      "title": "Diffusion \u00b7 train #5079 \u00b7 var 0",
+      "volumeFraction": 0.42724609375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-05079-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.00027455174897357104,
+            0.04836804569038277
+          ],
+          "robustRange": [
+            -0.00015501875627997635,
+            0.00015501875627997635
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.026852068881677797,
+            0.04836804569038277
+          ],
+          "robustRange": [
+            -0.0002528479274549062,
+            0.0002528479274549062
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.245529273084743,
+            2.246098593288846
+          ],
+          "robustRange": [
+            -0.010825209737173037,
+            0.010825209737173037
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            32.0,
+            9.0
+          ],
+          "force": [
+            -0.47203129529953003,
+            -0.09539002925157547,
+            -0.8764058351516724
+          ],
+          "magnitude": 0.9999999946553344
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 4303.277557503476
+    },
+    {
+      "id": "eds-diffusion-05079-01",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 5079,
+      "variant": 1,
+      "title": "Diffusion \u00b7 train #5079 \u00b7 var 1",
+      "volumeFraction": 0.494140625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-05079-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.0003157457469005702,
+            0.058292133409013326
+          ],
+          "robustRange": [
+            -5.178128030209256e-05,
+            5.178128030209256e-05
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.023130468484627405,
+            0.058292133409013326
+          ],
+          "robustRange": [
+            -0.00029645284061764515,
+            0.00029645284061764515
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.8795401337662219,
+            2.2189338387352713
+          ],
+          "robustRange": [
+            -0.010609376025576269,
+            0.010609376025576269
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            32.0,
+            9.0
+          ],
+          "force": [
+            -0.47203129529953003,
+            -0.09539002925157547,
+            -0.8764058351516724
+          ],
+          "magnitude": 0.9999999946553344
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 4274.042000276048
+    },
+    {
+      "id": "eds-diffusion-05079-02",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 5079,
+      "variant": 2,
+      "title": "Diffusion \u00b7 train #5079 \u00b7 var 2",
+      "volumeFraction": 0.380645751953125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-05079-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.00048664451219906045,
+            0.04442644541386387
+          ],
+          "robustRange": [
+            -0.00018097425791537564,
+            0.00018097425791537564
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.0238508122707939,
+            0.04442644541386387
+          ],
+          "robustRange": [
+            -0.00039131810092629703,
+            0.00039131810092629703
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.1064211830470834,
+            2.0644496603751277
+          ],
+          "robustRange": [
+            -0.016936505612804235,
+            0.016936505612804235
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            32.0,
+            9.0
+          ],
+          "force": [
+            -0.47203129529953003,
+            -0.09539002925157547,
+            -0.8764058351516724
+          ],
+          "magnitude": 0.9999999946553344
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 4722.122049090311
+    },
+    {
+      "id": "eds-diffusion-05079-03",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 5079,
+      "variant": 3,
+      "title": "Diffusion \u00b7 train #5079 \u00b7 var 3",
+      "volumeFraction": 0.454315185546875,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-05079-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.0003511860558205589,
+            0.04849237216658999
+          ],
+          "robustRange": [
+            -0.00021856734081612394,
+            0.00021856734081612394
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.03351393627130489,
+            0.04849237216658999
+          ],
+          "robustRange": [
+            -0.0006031423973350281,
+            0.0006031423973350281
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.412529028113033,
+            2.0470510037143708
+          ],
+          "robustRange": [
+            -0.02412943438908775,
+            0.02412943438908775
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            32.0,
+            9.0
+          ],
+          "force": [
+            -0.47203129529953003,
+            -0.09539002925157547,
+            -0.8764058351516724
+          ],
+          "magnitude": 0.9999999946553344
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 4613.519946395239
+    },
+    {
+      "id": "eds-diffusion-06356-00",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 6356,
+      "variant": 0,
+      "title": "Diffusion \u00b7 train #6356 \u00b7 var 0",
+      "volumeFraction": 0.31256103515625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-06356-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.019877852889530985,
+            0.2500326355907049
+          ],
+          "robustRange": [
+            -0.0005473694042279654,
+            0.0005473694042279654
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.06676526394258696,
+            0.2500326355907049
+          ],
+          "robustRange": [
+            -0.0006805369561596929,
+            0.0006805369561596929
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.805391605315969,
+            3.01745876710416
+          ],
+          "robustRange": [
+            -0.007936749890713015,
+            0.007936749890713015
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            11.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 1254.8253321432794
+    },
+    {
+      "id": "eds-diffusion-06356-01",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 6356,
+      "variant": 1,
+      "title": "Diffusion \u00b7 train #6356 \u00b7 var 1",
+      "volumeFraction": 0.22509765625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-06356-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -4.142532010538682,
+            6.353175104132516
+          ],
+          "robustRange": [
+            -0.0005450568802174533,
+            0.0005450568802174533
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -4.142532010538682,
+            6.353175104132516
+          ],
+          "robustRange": [
+            -0.00046133812546045923,
+            0.00046133812546045923
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.17154039306049,
+            1.796807102102093
+          ],
+          "robustRange": [
+            -9.90627228955957e-05,
+            9.90627228955957e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            11.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 2973.0144039094216
+    },
+    {
+      "id": "eds-diffusion-06356-02",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 6356,
+      "variant": 2,
+      "title": "Diffusion \u00b7 train #6356 \u00b7 var 2",
+      "volumeFraction": 0.3560791015625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-06356-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.005346627047897178,
+            0.0031335993826753583
+          ],
+          "robustRange": [
+            -0.000247971437956999,
+            0.000247971437956999
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.005346627047897178,
+            0.0031335993826753583
+          ],
+          "robustRange": [
+            -0.0003459710337626949,
+            0.0003459710337626949
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.7912032118682499,
+            0.4694621066642514
+          ],
+          "robustRange": [
+            -0.04861912416607798,
+            0.04861912416607798
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            11.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 900.7902182456282
+    },
+    {
+      "id": "eds-diffusion-06356-03",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 6356,
+      "variant": 3,
+      "title": "Diffusion \u00b7 train #6356 \u00b7 var 3",
+      "volumeFraction": 0.1998291015625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-06356-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -40.89224232184489,
+            67.77515107105316
+          ],
+          "robustRange": [
+            -0.0004257223488733741,
+            0.0004257223488733741
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -40.89224232184489,
+            67.77515107105316
+          ],
+          "robustRange": [
+            -0.0004582705480943055,
+            0.0004582705480943055
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.6768732415123013,
+            4.436753833298583
+          ],
+          "robustRange": [
+            -3.137200499017042e-05,
+            3.137200499017042e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            11.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 15317.089963842187
+    },
+    {
+      "id": "eds-diffusion-08508-00",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 8508,
+      "variant": 0,
+      "title": "Diffusion \u00b7 train #8508 \u00b7 var 0",
+      "volumeFraction": 0.4991455078125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-08508-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.0007942976289929686,
+            0.02808985906039981
+          ],
+          "robustRange": [
+            -1.1664454239834417e-05,
+            1.1664454239834417e-05
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.05251211882412594,
+            0.02808985906039981
+          ],
+          "robustRange": [
+            -0.0003141705406845203,
+            0.0003141705406845203
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.0200568862498782,
+            0.5466868545171301
+          ],
+          "robustRange": [
+            -0.005431551979235971,
+            0.005431551979235971
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            0.5184788107872009,
+            0.8550904989242554
+          ],
+          "magnitude": 1.0000000192929208
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 603.6807019612975
+    },
+    {
+      "id": "eds-diffusion-08508-01",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 8508,
+      "variant": 1,
+      "title": "Diffusion \u00b7 train #8508 \u00b7 var 1",
+      "volumeFraction": 0.336029052734375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-08508-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.026327451832294502,
+            0.020944868582526522
+          ],
+          "robustRange": [
+            -0.0008350638299848432,
+            0.0008350638299848432
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.051850215966141706,
+            0.020944868582526522
+          ],
+          "robustRange": [
+            -0.0012193161028060248,
+            0.0012193161028060248
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.9736087355833488,
+            0.39469872374918824
+          ],
+          "robustRange": [
+            -0.022384717030681293,
+            0.022384717030681293
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            0.5184788107872009,
+            0.8550904989242554
+          ],
+          "magnitude": 1.0000000192929208
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 696.4618722652172
+    },
+    {
+      "id": "eds-diffusion-08508-02",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 8508,
+      "variant": 2,
+      "title": "Diffusion \u00b7 train #8508 \u00b7 var 2",
+      "volumeFraction": 0.4627685546875,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-08508-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.0017737082628977987,
+            0.040058119706173054
+          ],
+          "robustRange": [
+            -0.000515029703621717,
+            0.000515029703621717
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.05499544838740313,
+            0.040058119706173054
+          ],
+          "robustRange": [
+            -0.000711644540897373,
+            0.000711644540897373
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.0099322044342967,
+            0.7368144113511174
+          ],
+          "robustRange": [
+            -0.012388897406654265,
+            0.012388897406654265
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            0.5184788107872009,
+            0.8550904989242554
+          ],
+          "magnitude": 1.0000000192929208
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 617.7427416025995
+    },
+    {
+      "id": "eds-diffusion-08508-03",
+      "kind": "generated",
+      "generator": "diffusion",
+      "trainingIndex": 8508,
+      "variant": 3,
+      "title": "Diffusion \u00b7 train #8508 \u00b7 var 3",
+      "volumeFraction": 0.377777099609375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-diffusion-08508-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -7.116742108395628e-05,
+            0.01940415384289906
+          ],
+          "robustRange": [
+            -4.863033265866007e-05,
+            4.863033265866007e-05
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.05071343924242311,
+            0.01940415384289906
+          ],
+          "robustRange": [
+            -0.00021265209504811074,
+            0.00021265209504811074
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.0811771398955665,
+            0.4145333521811628
+          ],
+          "robustRange": [
+            -0.004019838116066046,
+            0.004019838116066046
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            32.0,
+            32.0
+          ],
+          "force": [
+            0.0,
+            0.5184788107872009,
+            0.8550904989242554
+          ],
+          "magnitude": 1.0000000192929208
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 623.5012986178099
+    },
+    {
+      "id": "eds-gan-02697-00",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 2697,
+      "variant": 0,
+      "title": "GAN \u00b7 train #2697 \u00b7 var 0",
+      "volumeFraction": 0.413055419921875,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-02697-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -13.476380382263223,
+            15.175861070620634
+          ],
+          "robustRange": [
+            -0.0004728949136134107,
+            0.0004728949136134107
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -13.476380382263223,
+            15.175861070620634
+          ],
+          "robustRange": [
+            -0.0007529560794393175,
+            0.0007529560794393175
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.17029962986014,
+            2.4440895808521006
+          ],
+          "robustRange": [
+            -9.295854871016448e-05,
+            9.295854871016448e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "force": [
+            0.0,
+            0.532642126083374,
+            -0.8463405966758728
+          ],
+          "magnitude": 1.0000000200301444
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 5667.808759154904
+    },
+    {
+      "id": "eds-gan-02697-01",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 2697,
+      "variant": 1,
+      "title": "GAN \u00b7 train #2697 \u00b7 var 1",
+      "volumeFraction": 0.185882568359375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-02697-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.9017587994934648,
+            4.177747805828116
+          ],
+          "robustRange": [
+            -0.0037707100143216207,
+            0.0037707100143216207
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.9017587994934648,
+            4.177747805828116
+          ],
+          "robustRange": [
+            -0.003990336140362693,
+            0.003990336140362693
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.8044370229936159,
+            3.728433333177715
+          ],
+          "robustRange": [
+            -0.003114079914308688,
+            0.003114079914308688
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "force": [
+            0.0,
+            0.532642126083374,
+            -0.8463405966758728
+          ],
+          "magnitude": 1.0000000200301444
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 73929.54543844663
+    },
+    {
+      "id": "eds-gan-02697-02",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 2697,
+      "variant": 2,
+      "title": "GAN \u00b7 train #2697 \u00b7 var 2",
+      "volumeFraction": 0.290924072265625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-02697-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -21.94997763550677,
+            42.00700492974288
+          ],
+          "robustRange": [
+            -0.001404561748909386,
+            0.001404561748909386
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -21.94997763550677,
+            42.00700492974288
+          ],
+          "robustRange": [
+            -0.0009282960015112252,
+            0.0009282960015112252
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.251493180922111,
+            4.308943299898616
+          ],
+          "robustRange": [
+            -6.204278858527117e-05,
+            6.204278858527117e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "force": [
+            0.0,
+            0.532642126083374,
+            -0.8463405966758728
+          ],
+          "magnitude": 1.0000000200301444
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 15833.652788207972
+    },
+    {
+      "id": "eds-gan-02697-03",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 2697,
+      "variant": 3,
+      "title": "GAN \u00b7 train #2697 \u00b7 var 3",
+      "volumeFraction": 0.4271240234375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-02697-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -33.58121787492432,
+            47.869537814110195
+          ],
+          "robustRange": [
+            -0.0003208866833438738,
+            0.0003208866833438738
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -33.58121787492432,
+            47.869537814110195
+          ],
+          "robustRange": [
+            -0.00035316403886075836,
+            0.00035316403886075836
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.728985198708157,
+            3.8902817622560653
+          ],
+          "robustRange": [
+            -6.309692924696187e-05,
+            6.309692924696187e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            32.0,
+            0.0
+          ],
+          "force": [
+            0.0,
+            0.532642126083374,
+            -0.8463405966758728
+          ],
+          "magnitude": 1.0000000200301444
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 26492.776745955478
+    },
+    {
+      "id": "eds-gan-05110-00",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 5110,
+      "variant": 0,
+      "title": "GAN \u00b7 train #5110 \u00b7 var 0",
+      "volumeFraction": 0.210601806640625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-05110-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -3.8564738417211224,
+            15.783228461096787
+          ],
+          "robustRange": [
+            -0.0006458715917750829,
+            0.0006458715917750829
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -3.8564738417211224,
+            15.783228461096787
+          ],
+          "robustRange": [
+            -0.0008529120734926425,
+            0.0008529120734926425
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.8164687508924984,
+            3.3418394283858373
+          ],
+          "robustRange": [
+            -0.00011741184300791728,
+            0.00011741184300791728
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.6371774077415466,
+            0.0,
+            0.770717203617096
+          ],
+          "magnitude": 1.0000000284437962
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 7839.8403675383515
+    },
+    {
+      "id": "eds-gan-05110-01",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 5110,
+      "variant": 1,
+      "title": "GAN \u00b7 train #5110 \u00b7 var 1",
+      "volumeFraction": 0.251220703125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-05110-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -28.398356634935336,
+            55.131841992812994
+          ],
+          "robustRange": [
+            -0.0004666384362434665,
+            0.0004666384362434665
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -28.398356634935336,
+            55.131841992812994
+          ],
+          "robustRange": [
+            -0.00040403727561715046,
+            0.00040403727561715046
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.431960668209514,
+            4.721465204864745
+          ],
+          "robustRange": [
+            -4.049096983151801e-05,
+            4.049096983151801e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.6371774077415466,
+            0.0,
+            0.770717203617096
+          ],
+          "magnitude": 1.0000000284437962
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 27487.15463895047
+    },
+    {
+      "id": "eds-gan-05110-02",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 5110,
+      "variant": 2,
+      "title": "GAN \u00b7 train #5110 \u00b7 var 2",
+      "volumeFraction": 0.193939208984375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-05110-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -2.3880833818014655,
+            7.664295043484114
+          ],
+          "robustRange": [
+            -0.0010399018247871023,
+            0.0010399018247871023
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -2.3880833818014655,
+            7.664295043484114
+          ],
+          "robustRange": [
+            -0.00089065481102762,
+            0.00089065481102762
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.8024821675638291,
+            2.575813978945054
+          ],
+          "robustRange": [
+            -0.00021661516937632292,
+            0.00021661516937632292
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.6371774077415466,
+            0.0,
+            0.770717203617096
+          ],
+          "magnitude": 1.0000000284437962
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 5310.1367986495825
+    },
+    {
+      "id": "eds-gan-05110-03",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 5110,
+      "variant": 3,
+      "title": "GAN \u00b7 train #5110 \u00b7 var 3",
+      "volumeFraction": 0.4639892578125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-05110-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -61.464661203516854,
+            106.58917337988406
+          ],
+          "robustRange": [
+            -0.00016683761817731655,
+            0.00016683761817731655
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -61.464661203516854,
+            106.58917337988406
+          ],
+          "robustRange": [
+            -0.00020670333294888963,
+            0.00020670333294888963
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -3.5026955027230735,
+            6.074299481209678
+          ],
+          "robustRange": [
+            -3.178400892085815e-05,
+            3.178400892085815e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            0.0,
+            0.0,
+            24.0
+          ],
+          "force": [
+            0.6371774077415466,
+            0.0,
+            0.770717203617096
+          ],
+          "magnitude": 1.0000000284437962
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 26784.047776368152
+    },
+    {
+      "id": "eds-gan-06368-00",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 6368,
+      "variant": 0,
+      "title": "GAN \u00b7 train #6368 \u00b7 var 0",
+      "volumeFraction": 0.313751220703125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-06368-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.19913155498363683,
+            0.021068527628541625
+          ],
+          "robustRange": [
+            -0.012408499528135405,
+            0.012408499528135405
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.19913155498363683,
+            0.021068527628541625
+          ],
+          "robustRange": [
+            -0.01021958423854457,
+            0.01021958423854457
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.5212498110527313,
+            0.16253310757500108
+          ],
+          "robustRange": [
+            -0.07202084052874709,
+            0.07202084052874709
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            30.0,
+            32.0
+          ],
+          "force": [
+            0.973293662071228,
+            0.0014449815498664975,
+            -0.22955898940563202
+          ],
+          "magnitude": 0.9999999851083181
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 13075.45972073181
+    },
+    {
+      "id": "eds-gan-06368-01",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 6368,
+      "variant": 1,
+      "title": "GAN \u00b7 train #6368 \u00b7 var 1",
+      "volumeFraction": 0.580810546875,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-06368-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -2.1536888949478588,
+            3.199182987294298
+          ],
+          "robustRange": [
+            -0.001049355915911364,
+            0.001049355915911364
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -2.1536888949478588,
+            3.199182987294298
+          ],
+          "robustRange": [
+            -0.00072665777174432,
+            0.00072665777174432
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.0813264535284168,
+            1.6064511269399264
+          ],
+          "robustRange": [
+            -0.0002745689638115678,
+            0.0002745689638115678
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            30.0,
+            32.0
+          ],
+          "force": [
+            0.973293662071228,
+            0.0014449815498664975,
+            -0.22955898940563202
+          ],
+          "magnitude": 0.9999999851083181
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 3306.578844322082
+    },
+    {
+      "id": "eds-gan-06368-02",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 6368,
+      "variant": 2,
+      "title": "GAN \u00b7 train #6368 \u00b7 var 2",
+      "volumeFraction": 0.27764892578125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-06368-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.030530728085880265,
+            0.07817739255100278
+          ],
+          "robustRange": [
+            -0.0009375474593446167,
+            0.0009375474593446167
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.030530728085880265,
+            0.07817739255100278
+          ],
+          "robustRange": [
+            -0.0008626836421296103,
+            0.0008626836421296103
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.47439202199298736,
+            1.2179304900246049
+          ],
+          "robustRange": [
+            -0.01239681286927678,
+            0.01239681286927678
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            30.0,
+            32.0
+          ],
+          "force": [
+            0.973293662071228,
+            0.0014449815498664975,
+            -0.22955898940563202
+          ],
+          "magnitude": 0.9999999851083181
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 3300.6654878092804
+    },
+    {
+      "id": "eds-gan-06368-03",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 6368,
+      "variant": 3,
+      "title": "GAN \u00b7 train #6368 \u00b7 var 3",
+      "volumeFraction": 0.586944580078125,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-06368-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -34.6736909066816,
+            85.16508583413608
+          ],
+          "robustRange": [
+            -0.013154117781076072,
+            0.013154117781076072
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -34.6736909066816,
+            85.16508583413608
+          ],
+          "robustRange": [
+            -0.003198130994305249,
+            0.003198130994305249
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -2.2707949346827525,
+            5.577685031000234
+          ],
+          "robustRange": [
+            -0.00015395738171661297,
+            0.00015395738171661297
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            10.0,
+            30.0,
+            32.0
+          ],
+          "force": [
+            0.973293662071228,
+            0.0014449815498664975,
+            -0.22955898940563202
+          ],
+          "magnitude": 0.9999999851083181
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 72681.90600715105
+    },
+    {
+      "id": "eds-gan-08503-00",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 8503,
+      "variant": 0,
+      "title": "GAN \u00b7 train #8503 \u00b7 var 0",
+      "volumeFraction": 0.337066650390625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-08503-00.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -2.903469909125851,
+            9.818413546637405
+          ],
+          "robustRange": [
+            -0.0011498494167224537,
+            0.0011498494167224537
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -2.903469909125851,
+            9.818413546637405
+          ],
+          "robustRange": [
+            -0.001277830761960527,
+            0.001277830761960527
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.3016497447703153,
+            4.4020499713196575
+          ],
+          "robustRange": [
+            -0.0004932742777636526,
+            0.0004932742777636526
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            11.0,
+            1.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 27776.407801644058
+    },
+    {
+      "id": "eds-gan-08503-01",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 8503,
+      "variant": 1,
+      "title": "GAN \u00b7 train #8503 \u00b7 var 1",
+      "volumeFraction": 0.39459228515625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-08503-01.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -13.251500140247021,
+            35.50226317907275
+          ],
+          "robustRange": [
+            -0.001757479077535564,
+            0.001757479077535564
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -13.251500140247021,
+            35.50226317907275
+          ],
+          "robustRange": [
+            -0.001213834243913483,
+            0.001213834243913483
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -1.095954172854888,
+            2.9362901233787357
+          ],
+          "robustRange": [
+            -8.328454509158656e-05,
+            8.328454509158656e-05
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            11.0,
+            1.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 6610.933465208672
+    },
+    {
+      "id": "eds-gan-08503-02",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 8503,
+      "variant": 2,
+      "title": "GAN \u00b7 train #8503 \u00b7 var 2",
+      "volumeFraction": 0.32415771484375,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-08503-02.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -0.4930697974143723,
+            1.9738388533070124
+          ],
+          "robustRange": [
+            -0.0017005146039256274,
+            0.0017005146039256274
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -0.4930697974143723,
+            1.9738388533070124
+          ],
+          "robustRange": [
+            -0.0013946873972131753,
+            0.0013946873972131753
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -0.7143866469964645,
+            2.8603908154156836
+          ],
+          "robustRange": [
+            -0.0019251278859230116,
+            0.0019251278859230116
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            11.0,
+            1.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 6511.338776947496
+    },
+    {
+      "id": "eds-gan-08503-03",
+      "kind": "generated",
+      "generator": "gan",
+      "trainingIndex": 8503,
+      "variant": 3,
+      "title": "GAN \u00b7 train #8503 \u00b7 var 3",
+      "volumeFraction": 0.268951416015625,
+      "densityCutoff": 0.0,
+      "vtp": "vtp/eds-gan-08503-03.vtp",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "defaultScalar": "V_C_feas",
+      "scalars": [
+        {
+          "name": "V_C_feas",
+          "location": "point",
+          "range": [
+            -89.72104638349263,
+            127.07163960745926
+          ],
+          "robustRange": [
+            -0.004737729833492312,
+            0.004737729833492312
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C_rel",
+          "location": "point",
+          "range": [
+            -89.72104638349263,
+            127.07163960745926
+          ],
+          "robustRange": [
+            -0.002450616500892977,
+            0.002450616500892977
+          ],
+          "diverging": true
+        },
+        {
+          "name": "V_C",
+          "location": "point",
+          "range": [
+            -5.99895337072337,
+            8.496340614474128
+          ],
+          "robustRange": [
+            -0.0001518778196351981,
+            0.0001518778196351981
+          ],
+          "diverging": true
+        }
+      ],
+      "loads": [
+        {
+          "position": [
+            32.0,
+            11.0,
+            1.0
+          ],
+          "force": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "magnitude": 1.0
+        }
+      ],
+      "hasFixed": true,
+      "hasBox": true,
+      "compliance": 39406.11218621566
     }
   ]
 }

@@ -69,42 +69,81 @@ function fillScalarSelect(sample) {
   els.scalar.value = sample.defaultScalar;
 }
 
+function sampleKey(sample) {
+  if (!sample) return '';
+  return sample.id != null ? String(sample.id) : String(sample.index);
+}
+
+function sampleLabel(sample) {
+  if (sample.title) return sample.title;
+  if (sample.id) return sample.id;
+  return `#${sample.index}`;
+}
+
+function sampleBadge(sample) {
+  if (sample.kind === 'generated' && sample.generator) {
+    return sample.generator === 'gan' ? '[GAN]' : '[Diff]';
+  }
+  return '';
+}
+
 async function showSample(sample, scalarName) {
   try {
-    status(`Loading sample ${sample.index}…`);
+    status(`Loading ${sampleLabel(sample)}…`);
     const scalar =
       sample.scalars.find((s) => s.name === scalarName) || sample.scalars[0];
     const buffer = await fetchVtp(sample);
     await viewer.showSurface(buffer, scalar);
     setLoadActors(sample);
     updateCompliance(sample);
-    if (current?.index !== sample.index) viewer.resetCamera();
+    const key = sampleKey(sample);
+    if (!current || sampleKey(current) !== key) viewer.resetCamera();
     current = sample;
     viewer.render();
     for (const li of els.samples.children) {
-      li.classList.toggle('active', Number(li.dataset.index) === sample.index);
+      if (!li.dataset.key) continue;
+      li.classList.toggle('active', li.dataset.key === key);
     }
     status('');
   } catch (err) {
     console.error(err);
-    status(`Failed to load sample ${sample.index}: ${err.message}`, true);
+    status(`Failed to load ${sampleLabel(sample)}: ${err.message}`, true);
   }
 }
 
 function buildSampleList() {
-  for (const sample of manifest.samples) {
-    const li = document.createElement('li');
-    li.dataset.index = sample.index;
-    const loads = sample.loads?.length ?? 0;
-    li.innerHTML =
-      `#${sample.index} <small>${sample.shape.join('×')} · ` +
-      `${loads} load${loads === 1 ? '' : 's'}</small>`;
-    li.addEventListener('click', () => {
-      fillScalarSelect(sample);
-      showSample(sample, sample.defaultScalar);
-    });
-    els.samples.appendChild(li);
+  const nitoSamples = manifest.samples.filter((s) => s.kind !== 'generated');
+  const generated = manifest.samples.filter((s) => s.kind === 'generated');
+
+  function appendSection(title, samples) {
+    if (!samples.length) return;
+    const heading = document.createElement('li');
+    heading.className = 'section';
+    heading.textContent = title;
+    els.samples.appendChild(heading);
+    for (const sample of samples) {
+      const li = document.createElement('li');
+      li.dataset.key = sampleKey(sample);
+      const loads = sample.loads?.length ?? 0;
+      const badge = sampleBadge(sample);
+      const vf =
+        sample.volumeFraction != null
+          ? ` · VF ${Number(sample.volumeFraction).toFixed(3)}`
+          : '';
+      li.innerHTML =
+        `${badge ? badge + ' ' : ''}${sampleLabel(sample)} ` +
+        `<small>${sample.shape.join('×')} · ` +
+        `${loads} load${loads === 1 ? '' : 's'}${vf}</small>`;
+      li.addEventListener('click', () => {
+        fillScalarSelect(sample);
+        showSample(sample, sample.defaultScalar);
+      });
+      els.samples.appendChild(li);
+    }
   }
+
+  appendSection('NITO training', nitoSamples);
+  appendSection('Generated samples', generated);
 }
 
 async function init() {
